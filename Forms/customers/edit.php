@@ -5,7 +5,7 @@
     </div>
     <div class="form-group">
         <label for="password">Password</label>
-        <input class="form-control" type="password" id="password" name="password" required/>
+        <input class="form-control" type="password" id="password" name="password" />
     </div>
     <div class="form-group">
         <label for="firstname">First Name</label>

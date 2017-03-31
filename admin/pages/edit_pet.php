@@ -1,10 +1,5 @@
 <?php
 session_start();
-if(!$_SESSION['authorize']) {
-    //redirect to main page
-    header('Location:../../index.php');
-    exit;
-}
 
 $id = $_GET['id'];
 
@@ -20,13 +15,12 @@ if (mysqli_connect_errno())
     exit;
 }
 
-
+//select all the information of pet based on their id
 $sql = "SELECT * FROM PETS WHERE PET_ID='$id'";
-
-
 
 $result = mysqli_query($conn,$sql);
 
+//fetching and displaying all the information of pets such as name, breed, price and age
 if($result->num_rows == 1) {
     while ($row = $result->fetch_assoc()) {
 

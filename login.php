@@ -22,11 +22,12 @@
         exit;
     }
 
-
+    //selects all the information from admin
     $sql = "SELECT * FROM ADMIN WHERE USERNAME='$username'";
 
     $result = mysqli_query($conn,$sql);
 
+    //matches the password if the user loging in is a user or admin
     if($result->num_rows == 1) {
         $data = $result->fetch_assoc();
 

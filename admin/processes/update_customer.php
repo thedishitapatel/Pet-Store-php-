@@ -2,10 +2,9 @@
 
 $username= $_POST['username'];
 $first= strtoupper($_POST['first']);
-$password= md5($_POST['password']);
 $last= strtoupper($_POST['last']);
+$password= md5($_POST['password']);
 
-echo $username.' first '.$first.' pw '.$password.' last '.$last;
 require_once '../../database/secret.php';
 //connect with database
 $conn = mysqli_connect($host,$un , $pw,$db);
@@ -17,7 +16,6 @@ if (mysqli_connect_errno())
     header('Location:../admin.php');
     exit;
 }
-
 
 $sql = "UPDATE CUSTOMERS SET FIRST='$first', LAST='$last', PASSWORD='$password' WHERE USERNAME='$username'";
 

@@ -3,12 +3,6 @@
 
 session_start();
 
-if(!$_SESSION['authorize']) {
-    //redirect to main page
-    header('Location:../pages/pets.php');
-    exit;
-}
-
 $id = $_GET['id'];
 
 

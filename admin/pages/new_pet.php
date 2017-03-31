@@ -20,15 +20,13 @@ $_SESSION['title']="Add Pet";
                     <li><a href="new_pet.php">Add Pet</a></li>
                     <li><a href="customers.php">Customers</a></li>
                     <li><a href="pets.php">Pets</a></li>
-                    <li><a href="sell_pets.php">Sell Pet</a></li>
+                    <li><a href="sell_pet.php">Sell Pet</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
             </div>
         </nav>
 
         <?php include '../../Forms/pets/add.php' ?>
-
-
     </div>
 
 <?php require "../../includes/footer.php"?>

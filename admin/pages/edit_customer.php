@@ -17,21 +17,20 @@ if (mysqli_connect_errno())
     exit;
 }
 
-
+//select all the information of customer
 $sql = "SELECT * FROM CUSTOMERS WHERE USERNAME='$username'";
 
 
 
 $result = mysqli_query($conn,$sql);
 
+//fetching and displaying all the customer and its first and last name
 if($result->num_rows == 1) {
     while ($row = $result->fetch_assoc()) {
 
         $username = $row['USERNAME'];
         $first = $row['FIRST'];
         $last = $row['LAST'];
-
-
     }
 }
 ?>
@@ -42,6 +41,7 @@ if($result->num_rows == 1) {
     <div class="container">
 
         <h1 class="page-header">Edit <?=$username;?></h1>
+        <!--navigation bar-->
         <nav class=" navbar navbar-inverse">
             <div class="navbar-header">
                 <a href="../admin.php" class="navbar-brand">Home</a>
